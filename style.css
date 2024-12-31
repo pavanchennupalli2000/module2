@@ -1,0 +1,76 @@
+* {
+    margin: 3;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    line-height: 1.6;
+    padding: 10px;
+
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+header h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+.section {
+    border: 3px solid black;
+    padding: 25px;
+    margin-top: 0px;
+    margin:10px;
+    background-color: #aeacac;
+    position: relative;
+}
+.section .section-title {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    margin: 0px; 
+    color: rgb(230, 17, 17);
+    padding: 3px;
+    border: 2px solid rgb(15, 15, 15);
+    font-size: 1.25em;
+}
+
+.section.chicken .section-title {
+    background-color: #FFDDC1; 
+}
+.section.beef .section-title {
+    background-color: #FFABAB; 
+}
+
+.section.sushi .section-title {
+    background-color: #C1E1FF; 
+}
+@media (min-width: 992px) {
+    main {
+        display: flex;
+        justify-content: center;
+    }
+    .section {
+        width: 30%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    main {
+        display: flex;
+        flex-wrap:wrap;
+    }
+    .section {
+        width: 48%;
+        margin: 1%;
+    }
+    .section:nth-child(3) {
+        width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+    }
+}
